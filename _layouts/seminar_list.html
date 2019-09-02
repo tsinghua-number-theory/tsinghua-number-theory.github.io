@@ -11,17 +11,20 @@ layout: default
 <tr>
 <th>Time</th><th>Speaker</th><th>Title</th>
 </tr>
-{% for post in site.posts %}{% if post.my_type == page.my_subtype %}
+{% for post in site.posts %}{% if post.my_type == page.my_subtype %}{% if post.holiday == "true" %}
+<tr>
+<td>{{ post.date | date: "%a, %-d %b %Y" }}</td>
+<td colspan="2"><i>{{ post.title }}</i></td>
+</tr>
+{% else %}
 <tr>
 <td>{{ post.date | date: "%a, %-d %b %Y" }}</td>
 <td>{{ post.author }}</td>
 <td><a href="{{ post.url | prepend: site.baseurl }}" >{{ post.title }}</a></td>
 </tr>
 <tr>
-<td colspan="3">
-{{ post.content | markdownify }}
-</td>
+<td colspan="3"><b>Abstract:</b> {{ post.content | markdownify }}</td>
 </tr>
-{% endif %}{% endfor %}
+{% endif %}{% endif %}{% endfor %}
 </tbody>
 </table>

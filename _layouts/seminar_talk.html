@@ -1,21 +1,13 @@
 ---
 layout: default
 ---
-<div id="content">
 
-  <h2>{{ page.title }}</h2>
+<h2>{{ page.title }}</h2>
 
-  <p class="info">Posted by <b>{{ page.author }}</b> on <b>{{ page.date | date: "%a, %-d %b %Y" }}</b></p>
+<p><b>Time: </b> {{ page.date | date: "%a, %-d %b %Y" }}</p>
 
-  {{ content }}
+<p><b>Speaker:<b> {{ page.author }}</b></p>
 
-<div class="PageNavigation">
-  {% if page.previous.url %}
-    <a class="prev" href="{{page.previous.url | prepend: site.baseurl}}">&laquo; {{page.previous.title}}</a>
-  {% endif %}
-  {% if page.next.url %}
-    <a class="next" href="{{page.next.url | prepend: site.baseurl}}">{{page.next.title}} &raquo;</a>
-  {% endif %}
-</div>
+<p><b>Abstract:</b></p>
 
-</div>
+{{ content }}
