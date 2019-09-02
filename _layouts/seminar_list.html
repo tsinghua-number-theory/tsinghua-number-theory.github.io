@@ -1,19 +1,12 @@
 ---
-layout: page
-title: Seminars
-special_page: Seminars
+layout: default
 ---
 
-<ul>
-<li>
-<a href='{{ "seminar_2019_2.html" | prepend: site.baseurl }}'>Seminar 2019 Fall</a>
-</li>
-<li>
-<a href='{{ "seminar_2019_1.html" | prepend: site.baseurl }}'>Seminar 2019 Spring</a>
-</li>
-</ul>
+<h2>{{ page.title }}</h2>
 
-{% for post in site.posts %}{% if post.layout == "seminar_list" %}
+{{ content }}
+
+{% for post in site.posts %}{% if post.layout == "seminar_page" and post.my_type == page.my_subtype %}
   <div class="entry">
     <h3><a href="{{ post.url | prepend: site.baseurl }}" >{{ post.title }}</a></h3>
     <p class="info">Posted by <b>{{ post.author }}</b> on <b>{{ post.date | date: "%a, %-d %b %Y" }}</b></p>
