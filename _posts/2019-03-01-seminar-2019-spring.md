@@ -7,4 +7,6 @@ my_type: seminar_list
 my_subtype: seminar_2019_spring
 ---
 
-Under construction
+**Location:** First conference room at Jinchunyuan West Building (近春园西楼), unless <font color="red">marked in red</font>
+
+**Time:** Mon. 13:30-15:05, unless <font color="red">marked in red</font>
