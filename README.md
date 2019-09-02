@@ -1,2 +1,2 @@
 # tsinghua-number-theory.github.io
-Number Theory Team in Tsinghua University
+Number Theory Group in Tsinghua University
