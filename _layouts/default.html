@@ -24,8 +24,9 @@
           {% if page.special_page == "Seminars" %}class="dropbtn-active"{% else %}class="dropbtn"{% endif %}
           >Seminars</a>
           <div class="dropdown-content">
-            <a href='{{ "seminar_2019_2.html" | prepend: site.baseurl }}'>Seminar 2019 Fall</a>
-            <a href='{{ "seminar_2019_1.html" | prepend: site.baseurl }}'>Seminar 2019 Spring</a>
+{% for post in site.posts %}{% if post.my_type == "seminar_list" %}
+    <a href='{{ post.url | prepend: site.baseurl }}'>{{ post.title }}</a>
+{% endif %}{% endfor %}
           </div>
         </li>
       </ul>

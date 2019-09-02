@@ -5,15 +5,6 @@ special_page: Seminars
 ---
 
 <ul>
-<li>
-<a href='{{ "seminar_2019_2.html" | prepend: site.baseurl }}'>Seminar 2019 Fall</a>
-</li>
-<li>
-<a href='{{ "seminar_2019_1.html" | prepend: site.baseurl }}'>Seminar 2019 Spring</a>
-</li>
-</ul>
-
-<ul>
 {% for post in site.posts %}{% if post.my_type == "seminar_list" %}
   <li>
     <a href='{{ post.url | prepend: site.baseurl }}'>{{ post.title }}</a>

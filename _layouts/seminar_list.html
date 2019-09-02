@@ -11,7 +11,7 @@ layout: default
 <tr>
 <th>Time</th><th>Speaker</th><th>Title</th>
 </tr>
-{% for post in site.posts %}{% if post.my_type == page.my_subtype %}{% if post.holiday == "true" %}
+{% for post in site.posts reversed %}{% if post.my_type == page.my_subtype %}{% if post.holiday %}
 <tr>
 <td>{{ post.date | date: "%a, %-d %b %Y" }}</td>
 <td colspan="2"><i>{{ post.title }}</i></td>
