@@ -6,7 +6,7 @@ layout: default
 
 {{ content }}
 
-{% for post in site.posts %}{% if post.layout == "seminar_page" and post.my_type == page.my_subtype %}
+{% for post in site.posts %}{% if post.my_type == page.my_subtype %}
   <div class="entry">
     <h3><a href="{{ post.url | prepend: site.baseurl }}" >{{ post.title }}</a></h3>
     <p class="info">Posted by <b>{{ post.author }}</b> on <b>{{ post.date | date: "%a, %-d %b %Y" }}</b></p>
