@@ -18,7 +18,7 @@ layout: default
 </tr>
 {% else %}
 <tr>
-<td>{{ post.date | date: "%a, %-d %b %Y" }}{% if post.alternative_time %}
+<td>{{ post.date | date: "%a, %-d %b %Y" }}{% if post.alternative_time %},
 <font color="red">{{ post.alternative_time }}</font>{% endif %}{% if post.alternative_place %}<br>
 <font color="red"><b>Place:</b> {{ post.alternative_place }}</font>{% endif %}</td>
 <td>{{ post.author }}</td>

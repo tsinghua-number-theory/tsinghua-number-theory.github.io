@@ -4,7 +4,7 @@ layout: default
 
 <h2>{{ page.title }}</h2>
 
-<p><b>Time: </b> {{ page.date | date: "%a, %-d %b %Y" }}{% if page.alternative_time %}
+<p><b>Time: </b> {{ page.date | date: "%a, %-d %b %Y" }}{% if page.alternative_time %},
 <font color="red">{{ page.alternative_time }}</font>{% endif %}</p>
 
 {% if page.alternative_place %}
