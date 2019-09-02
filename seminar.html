@@ -13,11 +13,10 @@ special_page: Seminars
 </li>
 </ul>
 
+<ul>
 {% for post in site.posts %}{% if post.my_type == "seminar_list" %}
-  <div class="entry">
-    <h3><a href="{{ post.url | prepend: site.baseurl }}" >{{ post.title }}</a></h3>
-    <p class="info">Posted by <b>{{ post.author }}</b> on <b>{{ post.date | date: "%a, %-d %b %Y" }}</b></p>
-    {{ post.excerpt }}
-    {% comment %}  {{ post.content | markdownify }} {% endcomment %}
-  </div>
+  <li>
+    <a href='{{ post.url | prepend: site.baseurl }}'>{{ post.title }}</a>
+  </li>
 {% endif %}{% endfor %}
+</ul>

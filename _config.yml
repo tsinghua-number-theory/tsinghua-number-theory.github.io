@@ -1,8 +1,8 @@
 # Site settings
 title: Tsinghua Number Theory Group
 description: Number Theory Team in Tsinghua University
-baseurl: "/" # the subpath of your site, e.g. /blog/
+baseurl: / # the subpath of your site, e.g. /blog/
 
 # Build settings
 markdown: kramdown
-permalink: /:year/:title:output_ext
+permalink: /:year-:month-:day-:title:output_ext

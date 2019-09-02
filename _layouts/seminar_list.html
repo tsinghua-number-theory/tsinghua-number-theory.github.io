@@ -6,11 +6,22 @@ layout: default
 
 {{ content }}
 
+<table>
+<tbody>
+<tr>
+<th>Time</th><th>Speaker</th><th>Title</th>
+</tr>
 {% for post in site.posts %}{% if post.my_type == page.my_subtype %}
-  <div class="entry">
-    <h3><a href="{{ post.url | prepend: site.baseurl }}" >{{ post.title }}</a></h3>
-    <p class="info">Posted by <b>{{ post.author }}</b> on <b>{{ post.date | date: "%a, %-d %b %Y" }}</b></p>
-    {{ post.excerpt }}
-    {% comment %}  {{ post.content | markdownify }} {% endcomment %}
-  </div>
+<tr>
+<td>{{ post.date | date: "%a, %-d %b %Y" }}</td>
+<td>{{ post.author }}</td>
+<td><a href="{{ post.url | prepend: site.baseurl }}" >{{ post.title }}</a></td>
+</tr>
+<tr>
+<td colspan="3">
+{{ post.content | markdownify }}
+</td>
+</tr>
 {% endif %}{% endfor %}
+</tbody>
+</table>
