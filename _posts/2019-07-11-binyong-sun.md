@@ -4,7 +4,7 @@ title: "Arithmetic of automorphic <i>L</i>-functions and cohomological test vect
 date: 2019-07-11 12:00:00
 special_page: Seminars
 my_type: seminar_2019_spring
-author: SUN Binyong (AMSS)
+author: Binyong Sun (AMSS)
 ---
 
  It was known to Euler that ζ(2*k*) is a rational multiple of π<sup>2<i>k</i></sup>, where ζ is the Euler-Riemann zeta function,
