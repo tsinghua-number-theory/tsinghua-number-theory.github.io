@@ -14,14 +14,14 @@ unless <font color="red">marked in red</font></p>
 
 <table>
 <tr>
-<th>Time</th><th>Speaker</th><th>Title</th>
+<th>Time &amp; Place</th><th>Speaker</th><th>Title</th>
 </tr>
 {%- assign filtered_posts = site.posts | where: "my_type", page.my_subtype %}
 {%- for post in filtered_posts reversed %}
 <tr>
-<td>{{ post.date | date: "%a, %-d %b %Y" }}{% if post.alternative_time %},
-<font color="red">{{ post.alternative_time }}</font>{% endif %}{% if post.alternative_place %}<br>
-<font color="red"><b>Place:</b> {{ post.alternative_place }}</font>{% endif %}</td>
+<td>{{ post.date | date: "%a, %-d %b %Y" }},
+{% if post.alternative_time %}<font color="red">{{ post.alternative_time }}</font>{% else %}{{ page.default_time }}{% endif %}<br>
+{% if post.alternative_place %}<font color="red">{{ post.alternative_place }}</font>{% else %}{{ page.default_place }}{% endif %}</td>
 <td>{{ post.author }}</td>
 <td><a href="{{ post.url | prepend: site.baseurl }}" >{{ post.title }}</a></td>
 </tr>
