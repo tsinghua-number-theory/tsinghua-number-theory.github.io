@@ -7,4 +7,29 @@ my_type: seminar_2018_fall
 author: Emmanuel Lecouturier (YMSC, Tsinghua University)
 ---
 
-TBA
+In 1987, Barry Mazur and John Tate formulated refined conjectures of the “Birch and Swinnerton-Dyer type”, and one of these conjectures was essentially proved in the prime conductor case by
+Ehud de Shalit in 1995. One of the main objects in de Shalit's work is the so-called *refined* ℒ-*invariant*, which happens to be a Hecke operator. We apply some results of the theory of Mazur's
+Eisenstein ideal to study in which power of the Eisenstein ideal ℒ belongs. One corollary of our
+study is the following elementary identity on supersingular *j*-invariants.
+
+Let *N* be a prime number and *p* ≥ 5 be a prime dividing *N* − 1. For simplicity, assume
+*N* ≡ 1 (mod 12).
+Fix a surjective group homomorphism <math>
+	<mi>log</mi>
+	<mo>:</mo>
+	<msubsup>
+		<mi>𝔽</mi>
+		<mrow>
+			<msup>
+				<mi>N</mi>
+				<mn>2</mn>
+			</msup>
+		</mrow>
+		<mo>×</mo>
+	</msubsup>
+	<mo>→</mo>
+	<mi>ℤ</mi>
+	<mo>/</mo>
+	<mi>p</mi>
+	<mi>ℤ</mi>
+</math>
