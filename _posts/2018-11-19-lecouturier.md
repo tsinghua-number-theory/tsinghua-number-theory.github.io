@@ -15,5 +15,5 @@ study is the following elementary identity on supersingular *j*-invariants.
 Let *N* be a prime number and *p* ≥ 5 be a prime dividing *N* − 1. For simplicity, assume
 *N* ≡ 1 (mod 12).
 Fix a surjective group homomorphism
-log: ![image][{{ "/media/FN2times.svg" | prepend: site.baseurl }}]
+log: ![image]({{ "/media/FN2times.svg" | prepend: site.baseurl }})
 → ℤ/pℤ.
