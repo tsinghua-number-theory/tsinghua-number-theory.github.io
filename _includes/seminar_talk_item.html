@@ -1,0 +1,10 @@
+<tr>
+<td>{{ include.post.date | date: "%a, %-d %b %Y" }},
+{% if include.post.alternative_time %}<font color="red">{{ include.post.alternative_time }}</font>{% else %}{{ include.default_time }}{% endif %}<br>
+{% if include.post.alternative_place %}<font color="red">{{ include.post.alternative_place }}</font>{% else %}{{ include.default_place }}{% endif %}</td>
+<td>{{ include.post.author }}</td>
+<td><a href="{{ include.post.url | prepend: site.baseurl }}" >{{ include.post.title }}</a></td>
+</tr>
+<tr>
+<td colspan="3"><b>Abstract:</b> {{ include.post.content | markdownify }}</td>
+</tr>

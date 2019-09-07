@@ -18,15 +18,7 @@ unless <font color="red">marked in red</font></p>
 </tr>
 {%- assign filtered_posts = site.posts | where: "my_type", page.my_subtype %}
 {%- for post in filtered_posts reversed %}
-<tr>
-<td>{{ post.date | date: "%a, %-d %b %Y" }},
-{% if post.alternative_time %}<font color="red">{{ post.alternative_time }}</font>{% else %}{{ page.default_time }}{% endif %}<br>
-{% if post.alternative_place %}<font color="red">{{ post.alternative_place }}</font>{% else %}{{ page.default_place }}{% endif %}</td>
-<td>{{ post.author }}</td>
-<td><a href="{{ post.url | prepend: site.baseurl }}" >{{ post.title }}</a></td>
-</tr>
-<tr>
-<td colspan="3"><b>Abstract:</b> {{ post.content | markdownify }}</td>
-</tr>
+{%- include seminar_talk_item.html post=post
+default_time=page.default_time default_place=page.default_place %}
 {%- endfor %}
 </table>
