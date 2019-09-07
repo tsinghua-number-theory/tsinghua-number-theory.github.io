@@ -2,14 +2,15 @@
 layout: default
 ---
 
+{%- assign filtered_posts = site.posts | where: "my_subtype", page.my_type %}
+{%- assign my_parent = filtered_posts[0] %}
+
 <h2>{{ page.title }}</h2>
 
-<p><b>Time: </b> {{ page.date | date: "%a, %-d %b %Y" }}{% if page.alternative_time %},
-<font color="red">{{ page.alternative_time }}</font>{% endif %}</p>
+<p><b>Time: </b> {{ page.date | date: "%a, %-d %b %Y" }},
+{% if page.alternative_time %}<font color="red">{{ page.alternative_time }}</font>{% else %}{{ my_parent.default_time }}{% endif %}</p>
 
-{% if page.alternative_place %}
-<p><font color="red"><b>Place:</b> {{ page.alternative_place }}</font></p>
-{% endif %}
+<p>{% if page.alternative_place %}<font color="red"><b>Place:</b> {{ page.alternative_place }}</font>{% else %}<b>Place:</b> {{ my_parent.default_place }}{% endif %}</p>
 
 <p><b>Speaker:</b> {{ page.author }}</p>
 

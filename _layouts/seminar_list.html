@@ -6,12 +6,18 @@ layout: default
 
 {{ content }}
 
+<p><b>Place: </b>{{ page.default_place }},
+unless <font color="red">marked in red</font></p>
+
+<p><b>Time: </b>{{ page.default_weekday }} {{ page.default_time }},
+unless <font color="red">marked in red</font></p>
+
 <table>
-<tbody>
 <tr>
 <th>Time</th><th>Speaker</th><th>Title</th>
 </tr>
-{% for post in site.posts reversed %}{% if post.my_type == page.my_subtype %}
+{%- assign filtered_posts = site.posts | where: "my_type", page.my_subtype %}
+{%- for post in filtered_posts reversed %}
 <tr>
 <td>{{ post.date | date: "%a, %-d %b %Y" }}{% if post.alternative_time %},
 <font color="red">{{ post.alternative_time }}</font>{% endif %}{% if post.alternative_place %}<br>
@@ -22,6 +28,5 @@ layout: default
 <tr>
 <td colspan="3"><b>Abstract:</b> {{ post.content | markdownify }}</td>
 </tr>
-{% endif %}{% endfor %}
-</tbody>
+{%- endfor %}
 </table>
