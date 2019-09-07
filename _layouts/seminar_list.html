@@ -11,12 +11,7 @@ layout: default
 <tr>
 <th>Time</th><th>Speaker</th><th>Title</th>
 </tr>
-{% for post in site.posts reversed %}{% if post.my_type == page.my_subtype %}{% if post.holiday %}
-<tr>
-<td>{{ post.date | date: "%a, %-d %b %Y" }}</td>
-<td colspan="2"><i>{{ post.title }}</i></td>
-</tr>
-{% else %}
+{% for post in site.posts reversed %}{% if post.my_type == page.my_subtype %}
 <tr>
 <td>{{ post.date | date: "%a, %-d %b %Y" }}{% if post.alternative_time %},
 <font color="red">{{ post.alternative_time }}</font>{% endif %}{% if post.alternative_place %}<br>
@@ -27,6 +22,6 @@ layout: default
 <tr>
 <td colspan="3"><b>Abstract:</b> {{ post.content | markdownify }}</td>
 </tr>
-{% endif %}{% endif %}{% endfor %}
+{% endif %}{% endfor %}
 </tbody>
 </table>
