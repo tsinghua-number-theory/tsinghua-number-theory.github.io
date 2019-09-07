@@ -3,8 +3,6 @@
 <h4><a href="{{ my_parent.url | prepend: site.baseurl }}">{{ my_parent.title }}</a></h4>
 {%- assign start_time = include.start_time | default: "1970-01-01 12:00:00" | date_to_xmlschema %}
 {%- assign end_time = include.end_time | default: "2036-01-01 12:00:00" | date_to_xmlschema %}
-[debug] start_time {{ start_time }} <br>
-[debug] end_time {{ end_time }} <br>
 <table>
 <tr>
 <th>Time &amp; Place</th><th>Speaker</th><th>Title</th>
@@ -12,8 +10,7 @@
 {%- assign filtered_posts = site.posts | where: "my_type", my_parent.my_subtype %}
 {%- for post in filtered_posts reversed %}
 {%- assign post_time = post.date | date_to_xmlschema %}
-[debug] post_time {{ post_time }} <br>
-{%- if post_time >= start_time and post_time <= endtime %}
+{%- if post_time >= start_time and post_time <= end_time %}
 {%- include seminar_talk_item.html post=post
 default_time=my_parent.default_time default_place=my_parent.default_place %}
 {%- endif %}
