@@ -13,10 +13,10 @@
 {%- endfor -%}
 
 {%- assign title = include.title | default: selected_post.title -%}
-{%- assign speaker = include.speaker | default: selected_post.speaker -%}
+{%- assign speaker = include.author | default: selected_post.speaker -%}
 
-<p style="align: center; font-size: 50%;">
-<img src="{{ include.src | prepend: site.baseurl }}" alt="{{ speaker }}" style="width: 100%;"><br>
+<p style="text-align: center; font-size: 80%;">
+<img src="{{ include.src | prepend: site.baseurl }}" alt="{{ speaker }}" style="width: 60em;"><br>
 {{ speaker }} gave a talk
 <a href="{{ selected_post.url | prepend: site.baseurl }}">{{ title }}</a>
 at
