@@ -5,6 +5,7 @@ date: 2019-10-21 12:00:00
 special_page: Seminars
 my_type: seminar_2019_fall
 author: Nanjun Yang (YMSC, Tsinghua University)
+alternative_place: "Third conference room at floor 2, Jinchunyuan West Building (近春园西楼)"
 ---
 
 The category of (stable) MW-motives (defined by B. Calmès, F. Déglise and J. Fasel) is a refined version of Voevodsky's big motives, which provides a better approximation to the stable homotopy category of Morel and Voevodsky. A significant characteristic of this theory is that the projective bundle theorem doesn't hold.
