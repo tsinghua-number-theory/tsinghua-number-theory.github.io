@@ -528,6 +528,11 @@ th:last-child {
   padding-right: 0;
 }
 
+th,
+td.alt {
+  background-color: #f3ecfa;
+}
+
 b,
 strong {
   font-weight: bold;
