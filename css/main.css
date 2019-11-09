@@ -520,15 +520,19 @@ th {
 
 td:first-child,
 th:first-child {
-  padding-left: 0;
+  padding-left: 0.6rem;
 }
 
 td:last-child,
 th:last-child {
-  padding-right: 0;
+  padding-right: 0.6rem;
 }
 
-th,
+th {
+  background-color: #9b4dca;
+  color: white;
+}
+
 td.alt {
   background-color: #f3ecfa;
 }
