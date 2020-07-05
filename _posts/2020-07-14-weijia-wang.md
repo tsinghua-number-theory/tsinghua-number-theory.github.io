@@ -1,11 +1,11 @@
 ---
 layout: seminar_talk
 title: Modular regulator with Rogers-Zudilin method
-date: 2020-07-12 12:01:00
+date: 2020-07-14 12:01:00
 special_page: Seminars
 my_type: seminar_2020_spring
 author: Weijia Wang (ENS Lyon)
-alternative_time: "14:00-15:00"
+alternative_time: "16:00-17:00"
 ---
 
 Let *Y*(*N*) be the modular curve of level *N* and *E*(*N*)
